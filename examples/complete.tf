@@ -9,4 +9,9 @@ module "bitbucket_idp" {
 }
 
 
-openssl s_client -servername api.bitbucket.org -showcerts -connect api.bitbucket.org:443
+# How to get thumbprint_list
+# 1. openssl s_client -servername api.bitbucket.org -showcerts -connect api.bitbucket.org:443
+# 2. Copy server certificate (including the -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- lines)
+# 3. Save it to file called certificate.crt
+# 4. openssl x509 -in certificate.crt -fingerprint -noout
+# 5. Remove all :
