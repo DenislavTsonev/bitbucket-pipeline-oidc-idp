@@ -1,0 +1,77 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+        "Action": [
+          "cognito-idp:*",
+          "codebuild:*",
+          "s3:*",
+          "codepipeline:*",
+          "codecommit:*",
+          "rds:*",
+          "ec2:*",
+          "ds:*",
+          "elasticbeanstalk:*",
+          "ecr:*",
+          "ecs:*",
+          "eks:*",
+          "elasticache:*",
+          "lambda:*",
+          "dynamodb:*",
+          "logs:*",
+          "kms:*",
+          "sns:*",
+          "ssm:*",
+          "ram:*",
+          "cloudtrail:*",
+          "guardduty:*",
+          "config:*",
+          "cloudformation:*",
+          "cloudwatch:*",
+          "route53:*",
+          "autoscaling:*",
+          "iam:*",
+          "sts:*",
+          "elasticloadbalancing:*",
+          "application-autoscaling:*",
+          "organizations:*",
+          "budgets:*",
+          "route53resolver:*",
+          "secretsmanager:*",
+          "access-analyzer:*"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      {
+        "Action": [
+          "events:DeleteRule",
+          "events:DescribeRule",
+          "events:DisableRule",
+          "events:EnableRule",
+          "events:ListTargetsByRule",
+          "events:ListRuleNamesByTarget",
+          "events:ListTagsForResource",
+          "events:PutRule",
+          "events:PutTargets",
+          "events:PutEvents",
+          "events:PutPermission",
+          "events:RemovePermission",
+          "events:DescribeEventBus",
+          "events:RemoveTargets",
+          "events:TagResource",
+          "events:UntagResource"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "ssm:PutParameter",
+          "ssm:GetParameter"
+        ],
+        "Resource": "arn:aws:ssm:*:*:parameter/*"
+      }
+    ]
+ }
